@@ -1,22 +1,38 @@
 package main
 
-import "fmt"
-
-func sum(s []int, c chan int) {
-	sum := 0
-	for _, v := range s {
-		sum += v
-	}
-	c <- sum // send sum to c
-}
+import (
+	"fmt"
+	"strings"
+	"time"
+)
 
 func main() {
-	s := []int{7, 2, 8, -9, 4, 0}
+	c1 := make(chan string)
+	c2 := make(chan string)
+	str1 := "<>"
+	str2 := "<>"
+	for i := 0; i < 2; i++ {
+		str1 = strings.Replace(str1, "<>", "<<>>", -1)
+		str2 = strings.Replace(str2, "<>", "<<>>", -1)
+		str2 = strings.Replace(str2, "<>", "<> <>", -1)
+	}
 
-	c := make(chan int)
-	go sum(s[:len(s)/2], c)
-	go sum(s[len(s)/2:], c)
-	x, y := <-c, <-c // receive from c
+	go func() {
+		time.Sleep(time.Second * 1)
+		c1 <- str1
 
-	fmt.Println(x, y, x+y)
+	}()
+	go func() {
+		time.Sleep(time.Second * 2)
+		c2 <- str2
+	}()
+
+	for i := 0; i < 2; i++ {
+		select {
+		case msg1 := <-c1:
+			fmt.Println(msg1)
+		case msg2 := <-c2:
+			fmt.Println(msg2)
+		}
+	}
 }
