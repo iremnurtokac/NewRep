@@ -11,7 +11,7 @@ func main() {
 	c2 := make(chan string)
 	str1 := "<>"
 	str2 := "<>"
-	for i := 0; i < 3; i++ {
+	for i := 0; i < 6; i++ {
 		str1 = strings.Replace(str1, "<>", "<<>>", -1)
 		go func() {
 
