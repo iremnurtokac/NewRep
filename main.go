@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strings"
 	"time"
+
+	"github.com/iremnurtokac/NewRep/mymath"
 )
 
 func main() {
@@ -41,7 +43,8 @@ func main() {
 		}
 
 	}
-
+	fmt.Println(mymath.Sub(1, 2))
+	fmt.Println(mymath.Add(1, 2))
 	/*msg1 := <-c1
 	fmt.Println(msg1)
 	msg2 := <-c2
