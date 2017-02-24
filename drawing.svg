@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="130.30344"
-     inkscape:cy="552.2802"
+     inkscape:cx="154.54711"
+     inkscape:cy="511.8741"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -64,5 +64,22 @@
        d="m 109.1955,183.27982 14.33661,17.98125 -57.694609,46.00043 21.493971,26.95814 57.694608,-46.00042 14.33662,17.98126 14.70355,-37.45329 14.70386,-37.45289 -39.78731,5.99276 z"
        id="path3701"
        inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="star"
+       id="path3708"
+       sodipodi:sides="5"
+       sodipodi:cx="44.634011"
+       sodipodi:cy="201.85206"
+       sodipodi:r1="46.434956"
+       sodipodi:r2="23.217478"
+       sodipodi:arg1="1.0195184"
+       sodipodi:arg2="1.6478369"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 68.955538,241.40796 42.847091,225.00068 14.529889,237.20666 22.066185,207.30592 1.7071126,184.14651 32.473246,182.07412 48.20785,155.55484 l 11.47822,28.61993 30.083592,6.76959 -23.672203,19.76048 z"
+       inkscape:transform-center-x="-1.1043771"
+       inkscape:transform-center-y="-3.3706682"
+       style="stroke-width:0.26458332" />
   </g>
 </svg>
